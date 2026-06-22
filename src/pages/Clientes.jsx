@@ -26,7 +26,6 @@ function Clientes() {
   );
 }
 
-// CSS embutido para manter o padrão visual limpo
 const styles = {
   container: {
     padding: '40px',

@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Importação das páginas que você já criou
 import Login from './pages/Login';
 import Painel from './pages/Painel';
 import Clientes from './pages/Clientes';
+import Servicos from './pages/Servicos';
 
 function App() {
   return (
@@ -18,9 +18,11 @@ function App() {
         {/* Rota para o cadastro e gestão de clientes */}
         <Route path="/clientes" element={<Clientes />} />
         
-        {/* Você pode ir descomentando as rotas abaixo conforme for criando os arquivos na pasta pages */}
+        {/* Rota para a gestão de ordens de serviço (AGORA LIBERADA) */}
+        <Route path="/servicos" element={<Servicos />} />
+        
+        {/* Deixe comentado apenas o que ainda não foi criado */}
         {/* <Route path="/mercadorias" element={<Mercadorias />} /> */}
-        {/* <Route path="/servicos" element={<Servicos />} /> */}
       </Routes>
     </BrowserRouter>
   );
