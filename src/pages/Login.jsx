@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Login from './pages/Login'
-import Painel from './pages/Painel'
 // As próximas telas você vai descomentando conforme for criando
 // import Clientes from './pages/Clientes'
 // import Mercadorias from './pages/Mercadorias'
