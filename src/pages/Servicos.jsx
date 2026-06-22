@@ -14,10 +14,31 @@ function Servicos() {
 
   const handleSalvarOS = (e) => {
     e.preventDefault();
-    // No futuro, aqui você fará o POST para o Spring Boot
+    
+    // O POST REAL FICA AQUI (Descomente quando o Java estiver no ar)
+    
+    const urlDaSuaAPI = 'https://api-senac-solutions-hospedada.com/api/servicos';
+    const dadosOS = { cliente, equipamento, responsavel, observacoes, custo, status };
+
+    fetch(urlDaSuaAPI, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dadosOS),
+    })
+    .then(response => {
+      if(response.ok) {
+        alert("Salvo no banco de dados em produção com sucesso!");
+      }
+    })
+    .catch(error => console.error("Erro ao comunicar com o Java na nuvem:", error));
+    
+
+    // Aviso temporário para a apresentação
     alert('Ordem de Serviço salva com sucesso! (Simulação)');
     
-    // Limpa o formulário após salvar
+    // Só depois de salvar você limpa o formulário:
     setCliente('');
     setEquipamento('');
     setResponsavel('');
